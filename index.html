@@ -11,6 +11,7 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./style.css">
   </head>
   <body>
     <nav
@@ -112,7 +113,103 @@
       </div>
     </div>
 
-    
+    <!-- Carousal -->
+    <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="carousel-img-wrapper">
+              <img
+                src="./images/slide1.jpg"
+                class="d-block w-100 carousel-img"
+                alt="..."
+              />
+            </div>
+  
+            <div class="carousel-caption d-none d-md-block">
+              <h2>DevNotes</h2>
+              <p>
+                A collaborative blog for sharing and documenting web development
+                concepts step by step.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-img-wrapper">
+              <img
+                src="./images/slide2.jpg"
+                class="d-block w-100 carousel-img"
+                alt="..."
+              />
+            </div>
+  
+            <div class="carousel-caption d-none d-md-block">
+              <h2>Tutorials & Technical Notes</h2>
+              <p>
+                Articles, guides, and real-world examples written by developers
+                learning and building for the web.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-img-wrapper">
+              <img
+                src="./images/slide3.jpg"
+                class="d-block w-100 carousel-img"
+                alt="..."
+              />
+            </div>
+  
+            <div class="carousel-caption d-none d-md-block">
+              <h2>Built by Developers</h2>
+              <p>
+                A growing collection of insights, experiences, and ideas from
+                multiple authors in the web development community.
+              </p>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!--
               <a
                 class="nav-link dropdown-toggle"
                 href="./"
