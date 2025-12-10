@@ -1,20 +1,73 @@
+/* ---------- Carousel ---------- */
+
 .carousel-img-wrapper {
-    position: relative;
+  position: relative;
+}
+
+.carousel-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+/* dark overlay for text readability */
+.carousel-img-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* keep caption above overlay */
+.carousel-caption {
+  z-index: 2;
+}
+
+/* ---------- Blog Cards ---------- */
+
+@media (min-width: 993px) {
+  .blog {
+    flex-direction: row;
   }
-  
-  .carousel-img {
-    height: 400px;
+
+  .blog-img-container {
+    width: auto;
+  }
+
+  .blog-img-container .blog-img {
+    width: 200px;
+    height: 100% !important;
     object-fit: cover;
   }
-  
-  .carousel-img-wrapper::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 992px) {
+  .blog {
+    flex-direction: column-reverse !important;
   }
-  
-  .carousel-caption {
-    z-index: 2;
+  .blog-img-container {
+    width: 100%;
   }
-  
+
+  .blog-img-container .blog-img {
+    width: 100% !important;
+    height: auto;
+    object-fit: fill;
+  }
+}
+
+@media (max-width: 767px) {
+  .blog {
+    flex-direction: row !important;
+  }
+  .blog-img {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 500px) {
+  .blog {
+    flex-direction: column-reverse !important;
+  }
+}
